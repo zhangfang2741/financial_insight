@@ -78,7 +78,3 @@ def get_company_sentiment(company, start_date, end_date):
         sentiment_df.columns = ["Date", "ToneScore"]
         return sentiment_df
     return pd.DataFrame(columns=["Date", "ToneScore"])
-
-
-sentiment_df = get_company_sentiment(company="Nvidia", start_date='2025-07-20', end_date='2025-07-30')
-print(sentiment_df.head(10))

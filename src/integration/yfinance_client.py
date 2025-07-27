@@ -63,13 +63,6 @@ def get_stock_data_with_indicators(ticker='NVDA', start='2024-06-30', end='2025-
 
     # 九转序列（TD Sequential）计算
     df['NineTurnSignal'] = nine_turn_signal(df)
-
     df = df.dropna()
+    df = df.rename(columns={"index": "Date"}, inplace=True)
     return df
-
-
-ticker_info = get_stock_basic_info("NVDA")
-print(ticker_info)
-
-df = get_stock_data_with_indicators('NVDA', '2024-06-30', '2025-06-30')
-print(df.tail(10))
