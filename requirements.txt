@@ -2,8 +2,8 @@
 pandas>=1.5.0
 
 # 新闻抓取
-newspaper3k>=0.2.8
-lxml_html_clean==0.4.2
+#newspaper3k>=0.2.8
+#lxml_html_clean==0.4.2
 
 # 英文转中文翻译
 googletrans==4.0.0-rc1
@@ -32,3 +32,5 @@ peft==0.11.1
 
 # 如果你想直接使用 LLaMA-Factory (建议手动安装)
 # llama-factory 安装方式：https://github.com/hiyouga/LLaMA-Factory
+
+streamlit==1.28.0
