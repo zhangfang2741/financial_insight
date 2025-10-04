@@ -2,7 +2,7 @@ import os
 
 os.environ["http_proxy"] = "http://127.0.0.1:7890"
 os.environ["https_proxy"] = "http://127.0.0.1:7890"
-os.environ["GOOGLE_API_KEY"] = "AIzaSyB8-MZdYkN_OCtdj3OUP7UmoSzE3YSr4lc"
+os.environ["GOOGLE_API_KEY"] = ""
 #
 # from google.api_core.client_options import ClientOptions
 # from google.ai.generativelanguage_v1beta.services.model_service import ModelServiceClient
