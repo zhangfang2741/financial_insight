@@ -3,7 +3,7 @@ import logging
 from typing import List, Optional, Dict, Any
 
 from langchain_core.tools import tool
-from langgraph.constants import END
+from langgraph.constants import END, START
 from langgraph.graph import MessagesState, StateGraph
 from langgraph.prebuilt import ToolNode
 
@@ -400,16 +400,16 @@ if __name__ == "__main__":
             return END
         return "tools"
 
-
     # 5. 构建图
-    workflow = StateGraph(state_schema=MessagesState)
-    workflow.add_node("agent", call_model)
-    workflow.add_node("tools", ToolNode(xhs_tools))
-    workflow.set_entry_point("agent")
-    workflow.add_conditional_edges("agent", should_continue, ["tools", END])
-    workflow.add_edge("tools", "agent")
+    workflow = (
+        StateGraph(MessagesState)
+        .add_node("agent", call_model)
+        .add_node("tools", ToolNode(xhs_tools))
+        .add_edge(START, "agent")
+        .add_conditional_edges("agent", should_continue, {"tools": "tools", END: END})
+        .add_edge("tools", "agent")
+    )
 
-    # 6. 编译
     app = workflow.compile()
 
     # 7. 使用
