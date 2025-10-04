@@ -7,7 +7,7 @@ from src.tool.xms_tool import xhs_tools
 
 os.environ["http_proxy"] = "http://127.0.0.1:7890"
 os.environ["https_proxy"] = "http://127.0.0.1:7890"
-os.environ["GOOGLE_API_KEY"] = "AIzaSyB8-MZdYkN_OCtdj3OUP7UmoSzE3YSr4lc"
+os.environ["GOOGLE_API_KEY"] = ""
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage, SystemMessage
