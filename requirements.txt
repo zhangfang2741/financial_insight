@@ -34,3 +34,14 @@ peft==0.11.1
 # llama-factory 安装方式：https://github.com/hiyouga/LLaMA-Factory
 
 streamlit==1.28.0
+
+# langchain
+langchain
+langchain-openai
+langgraph
+pydantic
+
+#mcp
+mcp
+google-generativeai
+langchain-google-genai
