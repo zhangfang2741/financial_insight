@@ -1,0 +1,6 @@
+companies:
+  -Apple
+  -Nvidia
+start_date: "2025-01-01"
+end_date: "2025-06-30"
+data_path: "../data"
